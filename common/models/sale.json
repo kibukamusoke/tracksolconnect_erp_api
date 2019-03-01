@@ -1,0 +1,55 @@
+{
+  "name": "sale",
+  "plural": "sales",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "terminalId": {
+      "type": "number",
+      "required": true
+    },
+    "terminalVersion": {
+      "type": "string",
+      "required": true
+    },
+    "customerCode": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "number"
+    },
+    "staffCard": {
+      "type": "string",
+      "required": true
+    },
+    "actionId": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "number",
+      "required": true
+    },
+    "txnDate": {
+      "type": "date",
+      "required": true
+    },
+    "clientId": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

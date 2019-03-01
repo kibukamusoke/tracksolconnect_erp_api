@@ -1,0 +1,49 @@
+{
+  "name": "product",
+  "plural": "products",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "clientId": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "required": true,
+      "index": {
+        "unique": true
+      }
+    },
+    "unitPrice": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "minPrice": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "maxPrice": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "taxType": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
