@@ -1,0 +1,45 @@
+{
+  "name": "saleItem",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "code": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "quantity": {
+      "type": "number",
+      "required": true
+    },
+    "reference": {
+      "type": "string"
+    },
+    "taxGroup": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "discountType": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "number",
+      "required": true
+    },
+    "unitPrice": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

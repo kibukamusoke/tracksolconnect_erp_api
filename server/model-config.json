@@ -50,6 +50,17 @@
   "sale": {
     "dataSource": "datahubmysql",
     "public": true
+  },
+  "clientCodeInput": {
+    "dataSource": null,
+    "public": false
+  },
+  "saleItem": {
+    "dataSource": null,
+    "public": false
+  },
+  "staff": {
+    "dataSource": "datahubmysql",
+    "public": true
   }
 }
-

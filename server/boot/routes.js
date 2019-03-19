@@ -4,8 +4,8 @@ let terminalSale = require('./terminalSales');
 module.exports = function (app) {
   let router = app.loopback.Router();
 
-  router.get('/api/terminalUpdate', function (req, res) {
-    terminalFiles.getTerminalFiles(app)
+  router.get('/api/terminalUpdate/:clientId', function (req, res) {
+    terminalFiles.getTerminalFiles(app, req.params.clientId)
       .then(terminalFiles => {
         res.setHeader('Content-type', 'text/plain');
         res.status(200);

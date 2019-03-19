@@ -9,9 +9,15 @@ var app = module.exports = loopback();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.start = function() {
+let logger = function (req, res, next) {
+  console.log(JSON.stringify(req.body, null, 2));
+  next(); // pass the request to the next handler in the stack ::
+};
+app.use(logger);
+
+app.start = function () {
   // start the web server
-  return app.listen(function() {
+  return app.listen(function () {
     app.emit('started');
     var baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
@@ -24,7 +30,7 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-boot(app, __dirname, function(err) {
+boot(app, __dirname, function (err) {
   if (err) throw err;
 
   // start the server if `$ node server.js`

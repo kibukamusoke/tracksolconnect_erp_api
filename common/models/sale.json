@@ -25,6 +25,10 @@
       "type": "string",
       "required": true
     },
+    "staffCode": {
+      "type": "string",
+      "required": true
+    },
     "actionId": {
       "type": "number",
       "required": true
@@ -43,7 +47,7 @@
     },
     "items": {
       "type": [
-        "object"
+        "saleItem"
       ],
       "required": true
     }
