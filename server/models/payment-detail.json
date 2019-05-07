@@ -1,0 +1,38 @@
+{
+  "name": "paymentDetail",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "total": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "rounding": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "paid": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "change": {
+      "type": "number",
+      "default": 0
+    },
+    "paymentModes": {
+      "type": [
+        "customPaymentMode"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

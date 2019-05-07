@@ -1,6 +1,6 @@
 {
-  "name": "sale",
-  "plural": "sales",
+  "name": "salesOrder",
+  "plural": "salesOrders",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -55,9 +55,13 @@
       ],
       "required": true
     },
-    "paymentDetails": {
-      "type": "paymentDetail",
-      "required": false
+    "paymentTermCode": {
+      "type": "string",
+      "required": true
+    },
+    "paymentTermId": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],

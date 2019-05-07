@@ -1,6 +1,6 @@
 {
-  "name": "sale",
-  "plural": "sales",
+  "name": "stockReturn",
+  "plural": "stockReturns",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -16,7 +16,8 @@
       "required": true
     },
     "customerCode": {
-      "type": "string"
+      "type": "string",
+      "default": "customerId"
     },
     "customerId": {
       "type": "number"
@@ -41,10 +42,6 @@
       "type": "date",
       "required": true
     },
-    "invoiceNo": {
-      "type": "string",
-      "required": false
-    },
     "clientId": {
       "type": "string",
       "required": true
@@ -54,10 +51,6 @@
         "saleItem"
       ],
       "required": true
-    },
-    "paymentDetails": {
-      "type": "paymentDetail",
-      "required": false
     }
   },
   "validations": [],

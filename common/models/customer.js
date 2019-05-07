@@ -55,9 +55,9 @@ module.exports = function (Customer) {
         }
 
         customers.forEach((customer, index) => {
-          resStringTXT += customer.id + '|' + encodeURI(customer.businessName) + '|' + customer.id + '|' + customer.primaryPhone + '|' + (customer.addressLine1 ? encodeURI(customer.addressLine1) : '') + (customer.addressLine2 ? '%0A' + encodeURI(customer.addressLine2) : '') + (customer.zip ? '%0A' + customer.zip : '') + (customer.state ? ' ' + customer.state : '') + '|\n';
+          resStringTXT += customer.id + '|' + encodeURI(customer.businessName) + '|' + customer.id + '|' + customer.primaryPhone + '|' + (customer.addressLine1 ? encodeURI(customer.addressLine1) : '') + (customer.addressLine2 ? '%0A' + encodeURI(customer.addressLine2) : '') + (customer.zip ? '%0A' + customer.zip : '') + (customer.state ? ' ' + customer.state : '') + '|' + (customer.creditLimit ? customer.creditLimit * 100 : 0) +  '|\n';
           if (customer.code && customer.code.length > 3) ;
-          resStringLST += customer.code + '|' + customer.id + '|' + encodeURI(customer.businessName) + '|' + (customer.primaryPhone ? customer.primaryPhone : '') + '||||xx|||\n';
+          resStringLST += customer.code + '|' + customer.id + '|' + encodeURI(customer.businessName) + '|' + (customer.primaryPhone ? customer.primaryPhone : '') + '||||xx|||' + (customer.creditLimit ? customer.creditLimit * 100 : 0) + '|\n';
 
           if (customers.length === index + 1) {
             resStringTXT = 'B=' + resStringTXT.length + '\n' + resStringTXT;

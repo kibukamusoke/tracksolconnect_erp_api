@@ -22,6 +22,10 @@
         "unique": true
       }
     },
+    "uom": {
+      "type": "string",
+      "required": false
+    },
     "unitPrice": {
       "type": "number",
       "required": true,

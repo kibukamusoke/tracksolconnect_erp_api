@@ -51,6 +51,10 @@
     "dataSource": "datahubmysql",
     "public": true
   },
+  "salesOrder": {
+    "dataSource": "datahubmysql",
+    "public": true
+  },
   "clientCodeInput": {
     "dataSource": null,
     "public": false
@@ -60,6 +64,22 @@
     "public": false
   },
   "staff": {
+    "dataSource": "datahubmysql",
+    "public": true
+  },
+  "paymentDetail": {
+    "dataSource": null,
+    "public": false
+  },
+  "orderPaymentDetail": {
+    "dataSource": null,
+    "public": false
+  },
+  "customPaymentMode": {
+    "dataSource": null,
+    "public": false
+  },
+  "stockReturn": {
     "dataSource": "datahubmysql",
     "public": true
   }

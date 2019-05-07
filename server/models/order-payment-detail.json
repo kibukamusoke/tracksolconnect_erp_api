@@ -1,0 +1,27 @@
+{
+  "name": "orderPaymentDetail",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "total": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "paymentTerm": {
+      "type": "string",
+      "required": false
+    },
+    "remark": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

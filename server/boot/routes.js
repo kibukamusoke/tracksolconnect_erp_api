@@ -14,10 +14,10 @@ module.exports = function (app) {
       console.log(e);
     });
   });
-
   router.post('/api/createCustomerSale', function (req, res) {
     console.log(req.body);
     console.log(req.params);
+    req.body.type = req.params.type;
     terminalSale.createCustomerSale(app, req.body)
       .then(response => {
         res.setHeader('Content-type', 'application/json');
@@ -27,5 +27,34 @@ module.exports = function (app) {
       console.log(e);
     });
   });
+
+  router.post('/api/createStockReturn', function (req, res) {
+    console.log(req.body);
+    console.log(req.params);
+    req.body.type = req.params.type;
+    terminalSale.createStockReturn(app, req.body)
+      .then(response => {
+        res.setHeader('Content-type', 'application/json');
+        res.status(200);
+        res.send(response);
+      }).catch(e => {
+      console.log(e);
+    });
+  });
+
+  router.post('/api/createCustomerSalesOrder', function (req, res) {
+    console.log(req.body);
+    console.log(req.params);
+    req.body.type = req.params.type;
+    terminalSale.createCustomerSalesOrder(app, req.body)
+      .then(response => {
+        res.setHeader('Content-type', 'application/json');
+        res.status(200);
+        res.send(response);
+      }).catch(e => {
+      console.log(e);
+    });
+  });
+
   app.use(router);
 };

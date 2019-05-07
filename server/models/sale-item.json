@@ -21,6 +21,10 @@
     "reference": {
       "type": "string"
     },
+    "uom": {
+      "type": "string",
+      "required": false
+    },
     "taxGroup": {
       "type": "number",
       "required": true,

@@ -1,0 +1,29 @@
+{
+  "name": "customPaymentMode",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "type": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

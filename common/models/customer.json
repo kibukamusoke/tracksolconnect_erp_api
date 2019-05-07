@@ -49,6 +49,9 @@
     },
     "cardNo": {
       "type": "string"
+    },
+    "creditLimit": {
+      "type": "number"
     }
   },
   "validations": [],

@@ -61,7 +61,6 @@ module.exports = function (Paymentmode) {
             next(null, opt9 + optpay);
           }
         });
-
       }).catch(e => {
       console.log(e);
       next(e);
